@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains mxlos_content.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function mxlos_content_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the mxlos_content module.
+    case 'help.page.mxlos_content':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('mxlos content') . '</p>';
+      return $output;
+
+    default:
+  }
+}

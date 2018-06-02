@@ -1,0 +1,5 @@
+name: 'mxlos content'
+type: module
+description: 'mxlos content'
+core: 8.x
+package: 'mxlos'
