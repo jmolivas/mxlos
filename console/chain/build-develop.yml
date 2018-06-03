@@ -12,11 +12,11 @@ commands:
     arguments:
       profile: mxlos
   # Import configuration
-#  - command: config:import
+  - command: config:import
   # Import split configuration
-#  - command: config_split:import
-#    options:
-#      no-interaction: true
+  - command: config_split:import
+    options:
+      no-interaction: true
   # Rebuild caches.
   - command: cache:rebuild
     arguments:
