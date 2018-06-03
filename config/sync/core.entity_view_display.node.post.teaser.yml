@@ -5,9 +5,12 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.post.body
+    - field.field.node.post.field_image
+    - field.field.node.post.field_tags
     - node.type.post
   module:
     - text
+    - title
     - user
 id: node.post.teaser
 targetEntityType: node
@@ -26,11 +29,15 @@ content:
     weight: 100
     region: content
   title:
-    label: hidden
-    type: string
-    weight: -5
-    region: content
+    type: linked_and_wrapped
     settings:
-      link_to_entity: false
+      tag: h2
+      linked: true
+      classes: ''
+    weight: -5
+    label: above
     third_party_settings: {  }
-hidden: {  }
+    region: content
+hidden:
+  field_image: true
+  field_tags: true

@@ -1,8 +1,9 @@
-uuid: 1087b250-7c86-4b66-a3c2-3f6bb11816b3
+uuid: ad0c1dd9-0ffb-43af-951b-3267b5da543a
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.full
     - field.field.node.post.body
     - field.field.node.post.field_image
     - field.field.node.post.field_tags
@@ -19,20 +20,20 @@ third_party_settings:
     custom: false
     allow: false
     default: default
-id: node.post.default
+id: node.post.full
 targetEntityType: node
 bundle: post
-mode: default
+mode: full
 content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
   field_image:
-    weight: 103
+    weight: 1
     label: above
     settings:
       image_style: ''
@@ -41,7 +42,7 @@ content:
     type: image
     region: content
   field_tags:
-    weight: 102
+    weight: 3
     label: above
     settings:
       link: true
@@ -49,7 +50,7 @@ content:
     type: entity_reference_label
     region: content
   links:
-    weight: 100
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -59,7 +60,7 @@ content:
       tag: h1
       linked: false
       classes: ''
-    weight: -5
+    weight: 0
     label: above
     third_party_settings: {  }
     region: content
