@@ -1,0 +1,9 @@
+uuid: 44f943a7-b6ff-438f-a7a9-91beca6833e6
+langcode: en
+status: true
+dependencies: {  }
+id: talk
+label: Talk
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

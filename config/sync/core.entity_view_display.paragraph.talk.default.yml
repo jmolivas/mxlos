@@ -1,0 +1,30 @@
+uuid: f24c126f-ccd8-4dae-bda6-05fa484ccb4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.talk.field_speaker
+    - field.field.paragraph.talk.field_topic
+    - paragraphs.paragraphs_type.talk
+id: paragraph.talk.default
+targetEntityType: paragraph
+bundle: talk
+mode: default
+content:
+  field_speaker:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_topic:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

@@ -1,0 +1,41 @@
+uuid: 64690b69-8d89-4910-baad-8dde4904f5fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.talk.field_speaker
+    - field.field.paragraph.talk.field_topic
+    - paragraphs.paragraphs_type.talk
+  module:
+    - content_moderation
+id: paragraph.talk.default
+targetEntityType: paragraph
+bundle: talk
+mode: default
+content:
+  field_speaker:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_topic:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 2
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true
