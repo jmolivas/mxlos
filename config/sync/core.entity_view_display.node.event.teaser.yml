@@ -5,11 +5,20 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.event.body
+    - field.field.node.event.field_components
+    - field.field.node.event.field_venue
     - node.type.event
   module:
+    - panelizer
     - text
     - title
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.event.teaser
 targetEntityType: node
 bundle: event
@@ -26,6 +35,8 @@ content:
   links:
     weight: 100
     region: content
+    settings: {  }
+    third_party_settings: {  }
   title:
     type: linked_and_wrapped
     settings:
@@ -33,7 +44,9 @@ content:
       linked: true
       classes: ''
     weight: -5
-    label: above
+    label: hidden
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_components: true
+  field_venue: true
