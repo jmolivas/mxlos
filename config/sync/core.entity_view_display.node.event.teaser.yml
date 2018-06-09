@@ -8,7 +8,7 @@ dependencies:
     - field.field.node.event.field_components
     - field.field.node.event.field_image
     - field.field.node.event.field_venue
-    - image.style.medium
+    - image.style.large
     - node.type.event
   module:
     - image
@@ -30,7 +30,7 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 3
+    weight: 2
     settings:
       trim_length: 600
     third_party_settings: {  }
@@ -41,11 +41,11 @@ content:
     region: content
     label: hidden
     settings:
-      image_style: medium
+      image_style: large
       image_link: content
     third_party_settings: {  }
   links:
-    weight: 2
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -55,7 +55,7 @@ content:
       tag: h2
       linked: true
       classes: ''
-    weight: -5
+    weight: 0
     label: above
     third_party_settings: {  }
     region: content
