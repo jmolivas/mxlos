@@ -1,0 +1,39 @@
+uuid: dd9e8584-0b40-4cb7-921c-b15677261bd8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.event.body
+    - node.type.event
+  module:
+    - text
+    - title
+    - user
+id: node.event.teaser
+targetEntityType: node
+bundle: event
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+  title:
+    type: linked_and_wrapped
+    settings:
+      tag: h2
+      linked: true
+      classes: ''
+    weight: -5
+    label: above
+    third_party_settings: {  }
+    region: content
+hidden: {  }

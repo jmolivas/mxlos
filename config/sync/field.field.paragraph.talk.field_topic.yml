@@ -1,0 +1,19 @@
+uuid: bf67f6a7-1fe5-4d45-ab26-bb0c10f22378
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_topic
+    - paragraphs.paragraphs_type.talk
+id: paragraph.talk.field_topic
+field_name: field_topic
+entity_type: paragraph
+bundle: talk
+label: Topic
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

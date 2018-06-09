@@ -1,0 +1,20 @@
+uuid: c3ca887a-3acc-4947-8281-dd1fb1be9f0c
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - title
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  title:
+    display_configurable_title: true
+name: Event
+type: event
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false
