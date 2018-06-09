@@ -4,9 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.node.venue.body
+    - field.field.node.venue.field_address
+    - field.field.node.venue.field_map
     - field.field.node.venue.field_url
     - node.type.venue
   module:
+    - geolocation
     - link
     - panelizer
     - text
@@ -29,6 +32,20 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_address:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_map:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: geolocation_latlng
     region: content
   field_url:
     weight: 102

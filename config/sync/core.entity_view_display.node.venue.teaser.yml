@@ -5,9 +5,13 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.venue.body
+    - field.field.node.venue.field_address
+    - field.field.node.venue.field_map
     - field.field.node.venue.field_url
     - node.type.venue
   module:
+    - geolocation
+    - link
     - panelizer
     - title
     - user
@@ -22,10 +26,57 @@ targetEntityType: node
 bundle: venue
 mode: teaser
 content:
-  links:
+  field_address:
+    type: basic_string
     weight: 1
     region: content
+    label: hidden
     settings: {  }
+    third_party_settings: {  }
+  field_map:
+    type: geolocation_map
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      set_marker: '1'
+      title: ''
+      info_text: ''
+      google_map_settings:
+        height: 400px
+        width: 760px
+        type: HYBRID
+        zoom: '18'
+        maxZoom: 18
+        minZoom: 18
+        gestureHandling: auto
+        style: ''
+        info_auto_display: 1
+        marker_icon_path: ''
+        disableAutoPan: 1
+        mapTypeControl: 0
+        streetViewControl: 0
+        zoomControl: 0
+        rotateControl: 0
+        fullscreenControl: 0
+        scrollwheel: 0
+        draggable: 0
+        preferScrollingToZooming: 0
+        disableDoubleClickZoom: 0
+      use_overridden_map_settings: 0
+      common_map: ''
+    third_party_settings: {  }
+  field_url:
+    type: link
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
     third_party_settings: {  }
   title:
     type: linked_and_wrapped
@@ -34,9 +85,9 @@ content:
       linked: true
       classes: ''
     weight: 0
-    label: above
+    label: hidden
     third_party_settings: {  }
     region: content
 hidden:
   body: true
-  field_url: true
+  links: true
