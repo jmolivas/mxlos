@@ -1,26 +1,26 @@
-uuid: b45b4b77-565d-485b-a91a-525179e339e2
+uuid: 0044bdf8-ba3d-4280-9dbf-ff263a991255
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_image
-    - node.type.article
+    - node.type.event
   module:
     - image
-id: node.article.field_image
+id: node.event.field_image
 field_name: field_image
 entity_type: node
-bundle: article
+bundle: event
 label: Image
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
   file_directory: '[date:custom:Y]-[date:custom:m]'
   file_extensions: 'png gif jpg jpeg'
-  max_filesize: 2MB
+  max_filesize: ''
   max_resolution: 1024x960
   min_resolution: 640x480
   alt_field: false
