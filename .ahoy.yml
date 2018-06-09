@@ -45,5 +45,9 @@ commands:
     usage: Run bash into php service container.
 
   logs:
-    cmd: docker-compose logs -f
-    usage: Show logs service container.
+    cmd: docker-compose logs -f "$@"
+    usage: Show logs
+
+  destroy:
+    cmd: docker-compose down -v
+    usage: Stop and remove containers, networks, images, and destroy volumes.
